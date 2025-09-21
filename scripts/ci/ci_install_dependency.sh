@@ -20,6 +20,9 @@ bash "${SCRIPT_DIR}/../killall_sglang.sh"
 # Install apt packages
 apt install -y git libnuma-dev
 
+# For nightly CI
+apt install git-lfs rsync -y
+
 # Install uv
 if [ "$IS_BLACKWELL" = "1" ]; then
     # The blackwell CI runner has some issues with pip and uv,
